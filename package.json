@@ -20,9 +20,9 @@
     "webpack": "^1.12.2"
   },
   "scripts": {
-    "start": "node ./bin/www",
     "development": "cp views/index.html public/index.html && NODE_ENV=development webpack && webpack-dev-server --content-base public/ --hot --inline --devtool inline-source-map --history-api-fallback",
-    "test": "node_modules/.bin/mocha -w"
+    "production": "rm -rf public/index.html && NODE_ENV=production webpack -p && NODE_ENV=production node app.js",
+    "start": "npm run production"
   },
   "author": "Laura Wilson",
   "license": "ISC",

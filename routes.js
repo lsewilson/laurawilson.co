@@ -1,4 +1,3 @@
-// routes.js
 import React, { Component } from 'react'
 import { Route, IndexRoute, Link } from 'react-router'
 
@@ -25,11 +24,11 @@ class App extends Component {
 }
 
 // Pages
-class Home extends Component {
+class About extends Component {
   render(){
     return (
       <div>
-        <h2>Home</h2>
+        <h2>About me</h2>
         <div>Some home page content</div>
       </div>
     )
@@ -78,9 +77,9 @@ class NoMatch extends Component {
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={Home}/>
-    <Route path="about" component={About}/>
-    <Route path="work" component={Work}/>
+    <IndexRoute component={About}/>
+    <Route path="projects" component={Projects}/>
+    <Route path="blog" component={Blog}/>
     <Route path="contact" component={Contact}/>
     <Route path="*" component={NoMatch}/>
   </Route>
